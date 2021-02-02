@@ -11,12 +11,27 @@ const questions = [
         type: 'input',
         name: 'date',
         message: 'What is the date of the project?'.
-    }
+    },
+    {
+        type: 'input',
+        name: 'description',
+        message: 'Provide project description'
+    },
+    {
+        type: 'input',
+        name: 'installation',
+        message: 'Provide installation instructions'
+    },
+    {
+        type: 'input',
+        name: 'repo',
+        message: 'Provide repo link',
+    },
     {
         type: 'input',
         name: 'process',
         message: 'What were your methods of completing the project?',
-    }
+    },
 
 ];
 
