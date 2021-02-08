@@ -1,21 +1,11 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const util = require("util");
+const markdown = require("./utils/generateMarkdown");
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
 function promptUser() {
-  return inquirer.prompt([
-    {
-      type: "input",
-      name: "name",
-      message: "What is your name?"
-    },
-    {
-      type: "input",
-      name: "location",
-      message: "Where are you from?"
-    },
+  return inquirer.prompt([    
     {
       type: "input",
       name: "title",
@@ -50,7 +40,31 @@ function promptUser() {
         type: "input",
         name: "repo",
         message: "What is your repository link?"
-      }
+      },
+      {
+        type: "input",
+        name: "badge",
+        message: "Provide badge links that you want"
+      },
+      {
+        type: "input",
+        name: "license",
+        message: "Please provide your badge license"
+      },
+      {
+        type: "input",
+        name: "contribution",
+        message: "Please provide your contributing parties"
+      },
+      {
+        type: "input",
+        name: "email",
+        message: "Please provide your email address"
+      },
 
-  ]);
+  ]).then(answers => {
+      const { name, location, title, description, github, installation, usage, test, repo, badge, license, contribution, email} = answers;
+
+  })
 }
+
