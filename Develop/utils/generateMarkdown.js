@@ -11,9 +11,7 @@ function generateMarkdown(response) {
   -[usage](#usage)
   -[test](#test)
   -[repo](#repo)
-  -[badge](#badge)
-  -[license](#license)
-  -[contribution](#contribution)
+  -[email](#email)
   
   ${response.title}
   ##title:
@@ -34,18 +32,9 @@ function generateMarkdown(response) {
   ##test:
   
       ${response.repo}
-  ##repo:
-  
-      ${response.badge}
-  ##badge:
-  
-      ${response.license}
-  ##license:
+  ##repo:  
 
-        ${response.contribution}
-  ##contribution:
-
-        ${response.email}
+      ${response.email}
   ##email:
   `;
   }

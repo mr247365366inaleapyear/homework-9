@@ -3,10 +3,7 @@ const axios = require("axios");
 const fs = require("fs");
 const generate = require("./utils/generateMarkdown");
 
-//const writeFileAsync = util.promisify(fs.writeFile);
 const questions = [
-//function promptUser() {
-  //return inquirer.prompt([    
     {
       type: "input",
       name: "title",
@@ -44,29 +41,12 @@ const questions = [
       },
       {
         type: "input",
-        name: "badge",
-        message: "Provide badge links that you want"
-      },
-      {
-        type: "input",
-        name: "license",
-        message: "Please provide your badge license"
-      },
-      {
-        type: "input",
-        name: "contribution",
-        message: "Please provide your contributing parties"
-      },
-      {
-        type: "input",
         name: "email",
         message: "Please provide your email address"
       },
 
-  ];//)}.then(answers => {
-//      const { name, location, title, description, github, installation, usage, test, repo, badge, license, contribution, email} = answers;
-
-//  })
+  ];
+  
 inquirer
     .prompt(questions)
     .then(function(data){
